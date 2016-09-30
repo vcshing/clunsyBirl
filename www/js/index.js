@@ -76,15 +76,8 @@ var app = {
             });
 			
 			// Start showing banners (atomatic when autoShowBanner is set to true)
-			
-			window.admob.createBannerView(function () { }, function (e) {
-				game.onload();
-                 //alert(JSON.stringify(e));
-            });
-			// Request interstitial (will present automatically when autoShowInterstitial is set to true)
-		    //window.admob.requestInterstitialAd(function () { }, function (e) {
-                // // alert(JSON.stringify(e));
-            //});
+			app.startBannerAds();
+		
         } else {
              // alert('cordova-admob plugin not ready.\nAre you in a desktop browser? It won\'t work...');
         }
@@ -182,7 +175,7 @@ var app = {
     // -----------------------------------
     startBannerAds: function () {
         if (window.admob) {
-            app.showProgress(true);
+            app.showProgress(false);
             window.admob.createBannerView(function () { }, function (e) {
                 // // alert(JSON.stringify(e));
             });
