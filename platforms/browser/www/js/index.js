@@ -124,9 +124,10 @@ var app = {
 		app.DeviceonReady();
 		
         console.log('Received Event: ' + id);
+		alert(6);
     },
     DeviceonReady: function () {
-	
+		alert(7);
         var weinre;
         var weinreUrl;
 		// alert(5);
@@ -143,13 +144,13 @@ var app = {
         }
 
         if (window.admob) {
-			// alert(6);
+			 alert(6);
             console.log('Binding ad events...');
             app.bindAdEvents();
             console.log('Initializing ads...');
             app.initAds();
         } else {
-             // alert('cordova-admob plugin not ready.\nAre you in a desktop browser? It won\'t work...');
+              alert('cordova-admob plugin not ready.\nAre you in a desktop browser? It won\'t work...');
         }
     },
     onAdLoaded: function (e) {
