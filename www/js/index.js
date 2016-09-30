@@ -242,6 +242,12 @@ var app = {
     }
 };
 
+document.addEventListener("pause", onPause, false);
+
+function onPause() {
+    me.audio.stop("theme");
+}
+
 function removeClass(elem, cls) {
     var str;
     do {
