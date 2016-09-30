@@ -6,8 +6,9 @@
   <preference name="DisallowOverscroll" value="true"/>
   <preference name="android-minSdkVersion" value="14"/>
   <preference name="StatusBarOverlaysWebView" value="true" />
-  <preference name="orientation" value="Portrait" />
+  <preference name="orientation" value="landscape" />
   <preference name="fullscreen" value="true" />
+  
     <preference name="SplashScreen" value="/images/browser/splashscreen.jpg" /> <!-- defaults to "/img/logo.png" -->
     <preference name="SplashScreenDelay" value="3000" /> <!-- defaults to "3000" -->
     <preference name="SplashScreenBackgroundColor" value="green" /> <!-- defaults to "#464646" -->
@@ -22,7 +23,7 @@
    <plugin name="cordova-plugin-fullscreen" source="npm" />
      <plugin name="cordova-plugin-vibration" source="npm" spec="~2.1.0"/>
 	   <plugin name="cordova-plugin-splashscreen" source="npm" spec="~3.2.1"/>
-	   
+	    <plugin name="cordova-plugin-device-orientation" source="npm" spec="~1.0.2"/>
   <icon src="icon.png"/>
   <platform name="android">
     <icon src="www/res/icon/android/icon-36-ldpi.png" density="ldpi"/>
