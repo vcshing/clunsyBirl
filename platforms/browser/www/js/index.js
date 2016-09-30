@@ -68,8 +68,8 @@ var app = {
 				tappxIdAndroid:       "/120940746/Pub-12583-Android-7825",        // Optional
 				tappxShare:           0.8,                                        // Optional
                 interstitialAdId: admobid.interstitial,
-                bannerAtTop: false, // set to true, to put banner at top
-                overlap: true, // set to true, to allow banner overlap webview
+               // bannerAtTop: false, // set to true, to put banner at top
+                overlap: false, // set to true, to allow banner overlap webview
                 offsetStatusBar: true, // set to true to avoid ios7 status bar overlap
                 autoShowBanner: true, // auto show banners ad when loaded
                 autoShowInterstitial: true // auto show interstitials ad when loaded
@@ -78,12 +78,12 @@ var app = {
 			// Start showing banners (atomatic when autoShowBanner is set to true)
 			
 			window.admob.createBannerView(function () { }, function (e) {
-                 alert(JSON.stringify(e));
+                 //alert(JSON.stringify(e));
             });
 			// Request interstitial (will present automatically when autoShowInterstitial is set to true)
-		    window.admob.requestInterstitialAd(function () { }, function (e) {
+		    //window.admob.requestInterstitialAd(function () { }, function (e) {
                 // // alert(JSON.stringify(e));
-            });
+            //});
         } else {
              // alert('cordova-admob plugin not ready.\nAre you in a desktop browser? It won\'t work...');
         }
