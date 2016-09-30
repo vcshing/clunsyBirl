@@ -47,11 +47,11 @@ var app = {
         var isAndroid = (/(android)/i.test(navigator.userAgent));
         var adPublisherIds = {
             ios: {
-                banner: "ca-app-pub-3715336230214756/9015683827",
+                banner: 'ca-app-pub-3715336230214756/9015683827',
                 interstitial: 'ca-app-pub-3715336230214756/1492417024'
             },
             android: {
-                banner: "ca-app-pub-3715336230214756/9015683827",
+                banner: 'ca-app-pub-3715336230214756/9015683827',
                 interstitial: 'ca-app-pub-3715336230214756/1492417024'
             }
         };
@@ -66,7 +66,8 @@ var app = {
             admob.setOptions({
        			publisherId:          admobid.banner,  // Required
 				tappxIdAndroid:       "/120940746/Pub-12583-Android-7825",        // Optional
-				tappxShare:           0.8,                                        // Optional
+				tappxShare:           0.8, 
+				isTesting: true, // receiving test ads (do not test with real ads as your account will be banned)				// Optional
                 interstitialAdId: admobid.interstitial,
                // bannerAtTop: false, // set to true, to put banner at top
                 overlap: false, // set to true, to allow banner overlap webview
