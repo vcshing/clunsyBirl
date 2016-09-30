@@ -70,14 +70,15 @@ var app = {
                 interstitialAdId: admobid.interstitial,
                // bannerAtTop: false, // set to true, to put banner at top
                 overlap: false, // set to true, to allow banner overlap webview
-                offsetStatusBar: true, // set to true to avoid ios7 status bar overlap
-                autoShowBanner: true, // auto show banners ad when loaded
-                autoShowInterstitial: true // auto show interstitials ad when loaded
+              //  offsetStatusBar: true, // set to true to avoid ios7 status bar overlap
+              ////  autoShowBanner: true, // auto show banners ad when loaded
+              //  autoShowInterstitial: true // auto show interstitials ad when loaded
             });
 			
 			// Start showing banners (atomatic when autoShowBanner is set to true)
 			
 			window.admob.createBannerView(function () { }, function (e) {
+				game.onload();
                  //alert(JSON.stringify(e));
             });
 			// Request interstitial (will present automatically when autoShowInterstitial is set to true)
@@ -128,10 +129,10 @@ var app = {
 		app.DeviceonReady();
 		
         console.log('Received Event: ' + id);
-		alert(6);
+		//alert(6);
     },
     DeviceonReady: function () {
-		alert(7);
+		//alert(7);
         var weinre;
         var weinreUrl;
 		// alert(5);
@@ -148,7 +149,7 @@ var app = {
         }
 
         if (window.admob) {
-			 alert(6);
+			// alert(6);
             console.log('Binding ad events...');
             app.bindAdEvents();
             console.log('Initializing ads...');
