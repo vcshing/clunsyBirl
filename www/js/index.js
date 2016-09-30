@@ -83,7 +83,7 @@ var app = {
 			// Request interstitial (will present automatically when autoShowInterstitial is set to true)
 			admob.requestInterstitial();
         } else {
-            // alert('cordova-admob plugin not ready.\nAre you in a desktop browser? It won\'t work...');
+             alert('cordova-admob plugin not ready.\nAre you in a desktop browser? It won\'t work...');
         }
     },
     // Bind Event Listeners
