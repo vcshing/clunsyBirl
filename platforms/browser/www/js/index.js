@@ -38,23 +38,21 @@ var app = {
 
     // Application Constructor
     initialize: function () {
-        if ((/(ipad|iphone|ipod|android)/i.test(navigator.userAgent))) {
+
             document.addEventListener('deviceready', this.onDeviceReady, false);
-        } else {
-            app.onDeviceReady();
-        }
+	
     },
     // Must be called when deviceready is fired so AdMobAds plugin will be ready
     initAds: function () {
         var isAndroid = (/(android)/i.test(navigator.userAgent));
         var adPublisherIds = {
             ios: {
-                banner: "ca-app-pub-3715336230214756/7776283029",
-                interstitial: 'ca-app-pub-3715336230214756/3086901420'
+                banner: "ca-app-pub-3715336230214756/9015683827",
+                interstitial: 'ca-app-pub-3715336230214756/1492417024'
             },
             android: {
-                banner: "ca-app-pub-3715336230214756/7776283029",
-                interstitial: 'ca-app-pub-3715336230214756/3086901420'
+                banner: "ca-app-pub-3715336230214756/9015683827",
+                interstitial: 'ca-app-pub-3715336230214756/1492417024'
             }
         };
         var admobid;
@@ -76,8 +74,14 @@ var app = {
                 autoShowBanner: true, // auto show banners ad when loaded
                 autoShowInterstitial: true // auto show interstitials ad when loaded
             });
+			
+			// Start showing banners (atomatic when autoShowBanner is set to true)
+			admob.createBannerView();
+
+			// Request interstitial (will present automatically when autoShowInterstitial is set to true)
+			admob.requestInterstitial();
         } else {
-            // alert('cordova-admob plugin not ready.\nAre you in a desktop browser? It won\'t work...');
+             // alert('cordova-admob plugin not ready.\nAre you in a desktop browser? It won\'t work...');
         }
     },
     // Bind Event Listeners
@@ -91,7 +95,7 @@ var app = {
             document.addEventListener(admob.events.onAdLeftApplication, function (e) { }, false);
             document.addEventListener(admob.events.onInAppPurchaseRequested, function (e) { }, false);
         } else {
-            // alert('cordova-admob plugin not ready.\nAre you in a desktop browser? It won\'t work...');
+            // // alert('cordova-admob plugin not ready.\nAre you in a desktop browser? It won\'t work...');
         }
     },
 
@@ -102,10 +106,30 @@ var app = {
     onOrientationChange: function () {
         app.onResize();
     },
-    onDeviceReady: function () {
-        var weinre,
-            weinreUrl;
+    onDeviceReady: function() {
+	
+        app.receivedEvent('deviceready');
+    },
+	receivedEvent: function(id) {
+	
+		/*
+       var parentElement = document.getElementById(id);
+        var listeningElement = parentElement.querySelector('.listening');
+        var receivedElement = parentElement.querySelector('.received');
 
+        listeningElement.setAttribute('style', 'display:none;');
+        receivedElement.setAttribute('style', 'display:block;');
+		*/
+
+		app.DeviceonReady();
+		
+        console.log('Received Event: ' + id);
+    },
+    DeviceonReady: function () {
+	
+        var weinre;
+        var weinreUrl;
+		// alert(5);
         document.removeEventListener('deviceready', app.onDeviceReady, false);
 
         if (app.weinre.enabled) {
@@ -119,12 +143,13 @@ var app = {
         }
 
         if (window.admob) {
+			// alert(6);
             console.log('Binding ad events...');
             app.bindAdEvents();
             console.log('Initializing ads...');
             app.initAds();
         } else {
-            // alert('cordova-admob plugin not ready.\nAre you in a desktop browser? It won\'t work...');
+             // alert('cordova-admob plugin not ready.\nAre you in a desktop browser? It won\'t work...');
         }
     },
     onAdLoaded: function (e) {
@@ -133,13 +158,13 @@ var app = {
             if (app.autoShowInterstitial) {
                 window.admob.showInterstitialAd();
             } else {
-                // alert("Interstitial is available. Click on 'Show Interstitial' to show it.");
+                // // alert("Interstitial is available. Click on 'Show Interstitial' to show it.");
             }
         }
     },
     onAdFailedToLoad: function (e) {
         app.showProgress(false);
-        // alert("Could not load ad: " + JSON.stringify(e));
+        // // alert("Could not load ad: " + JSON.stringify(e));
     },
     onResize: function () {
         var msg = 'Web view size: ' + window.innerWidth + ' x ' + window.innerHeight;
@@ -151,12 +176,12 @@ var app = {
     // -----------------------------------
     startBannerAds: function () {
         if (window.admob) {
-            app.showProgress(false);
+            app.showProgress(true);
             window.admob.createBannerView(function () { }, function (e) {
-                // alert(JSON.stringify(e));
+                // // alert(JSON.stringify(e));
             });
         } else {
-            // alert('cordova-admob plugin not ready.\nAre you in a desktop browser? It won\'t work...');
+            // // alert('cordova-admob plugin not ready.\nAre you in a desktop browser? It won\'t work...');
         }
     },
     removeBannerAds: function () {
@@ -164,17 +189,17 @@ var app = {
             app.showProgress(false);
             window.admob.destroyBannerView();
         } else {
-            // alert('cordova-admob plugin not ready.\nAre you in a desktop browser? It won\'t work...');
+            // // alert('cordova-admob plugin not ready.\nAre you in a desktop browser? It won\'t work...');
         }
     },
     showBannerAds: function () {
         if (window.admob) {
             app.showProgress(false);
             window.admob.showBannerAd(true, function () { }, function (e) {
-                // alert(JSON.stringify(e));
+                // // alert(JSON.stringify(e));
             });
         } else {
-            // alert('cordova-admob plugin not ready.\nAre you in a desktop browser? It won\'t work...');
+            // // alert('cordova-admob plugin not ready.\nAre you in a desktop browser? It won\'t work...');
         }
     },
     hideBannerAds: function () {
@@ -182,7 +207,7 @@ var app = {
             app.showProgress(false);
             window.admob.showBannerAd(false);
         } else {
-            // alert('cordova-admob plugin not ready.\nAre you in a desktop browser? It won\'t work...');
+            // // alert('cordova-admob plugin not ready.\nAre you in a desktop browser? It won\'t work...');
         }
     },
     requestInterstitial: function (autoshow) {
@@ -190,20 +215,20 @@ var app = {
             app.showProgress(true);
             app.autoShowInterstitial = autoshow;
             window.admob.requestInterstitialAd(function () { }, function (e) {
-                // alert(JSON.stringify(e));
+                // // alert(JSON.stringify(e));
             });
         } else {
-            // alert('cordova-admob plugin not ready.\nAre you in a desktop browser? It won\'t work...');
+            // // alert('cordova-admob plugin not ready.\nAre you in a desktop browser? It won\'t work...');
         }
     },
     showInterstitial: function () {
         if (window.admob) {
             app.showProgress(false);
             window.admob.showInterstitialAd(function () { }, function (e) {
-                // alert(JSON.stringify(e));
+                // // alert(JSON.stringify(e));
             });
         } else {
-            // alert('cordova-admob plugin not ready.\nAre you in a desktop browser? It won\'t work...');
+            // // alert('cordova-admob plugin not ready.\nAre you in a desktop browser? It won\'t work...');
         }
     },
     showProgress: function (show) {

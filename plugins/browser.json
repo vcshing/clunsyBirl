@@ -8,72 +8,72 @@
     },
     "installed_plugins": {
         "cordova-plugin-battery-status": {
-            "PACKAGE_NAME": "com.phonegap.master2048"
+            "PACKAGE_NAME": "com.phonegap.clunsyBirl"
         },
         "cordova-plugin-camera": {
-            "PACKAGE_NAME": "com.phonegap.master2048"
+            "PACKAGE_NAME": "com.phonegap.clunsyBirl"
         },
         "cordova-plugin-media-capture": {
-            "PACKAGE_NAME": "com.phonegap.master2048"
+            "PACKAGE_NAME": "com.phonegap.clunsyBirl"
         },
         "cordova-plugin-console": {
-            "PACKAGE_NAME": "com.phonegap.master2048"
+            "PACKAGE_NAME": "com.phonegap.clunsyBirl"
         },
         "cordova-plugin-contacts": {
-            "PACKAGE_NAME": "com.phonegap.master2048"
+            "PACKAGE_NAME": "com.phonegap.clunsyBirl"
         },
         "cordova-plugin-device": {
-            "PACKAGE_NAME": "com.phonegap.master2048"
+            "PACKAGE_NAME": "com.phonegap.clunsyBirl"
         },
         "cordova-plugin-device-motion": {
-            "PACKAGE_NAME": "com.phonegap.master2048"
+            "PACKAGE_NAME": "com.phonegap.clunsyBirl"
         },
         "cordova-plugin-device-orientation": {
-            "PACKAGE_NAME": "com.phonegap.master2048"
+            "PACKAGE_NAME": "com.phonegap.clunsyBirl"
         },
         "cordova-plugin-dialogs": {
-            "PACKAGE_NAME": "com.phonegap.master2048"
+            "PACKAGE_NAME": "com.phonegap.clunsyBirl"
         },
         "cordova-plugin-file-transfer": {
-            "PACKAGE_NAME": "com.phonegap.master2048"
+            "PACKAGE_NAME": "com.phonegap.clunsyBirl"
         },
         "cordova-plugin-geolocation": {
-            "PACKAGE_NAME": "com.phonegap.master2048"
+            "PACKAGE_NAME": "com.phonegap.clunsyBirl"
         },
         "cordova-plugin-globalization": {
-            "PACKAGE_NAME": "com.phonegap.master2048"
+            "PACKAGE_NAME": "com.phonegap.clunsyBirl"
         },
         "cordova-plugin-inappbrowser": {
-            "PACKAGE_NAME": "com.phonegap.master2048"
+            "PACKAGE_NAME": "com.phonegap.clunsyBirl"
         },
         "cordova-plugin-media": {
-            "PACKAGE_NAME": "com.phonegap.master2048"
+            "PACKAGE_NAME": "com.phonegap.clunsyBirl"
         },
         "cordova-plugin-network-information": {
-            "PACKAGE_NAME": "com.phonegap.master2048"
+            "PACKAGE_NAME": "com.phonegap.clunsyBirl"
         },
         "cordova-plugin-statusbar": {
-            "PACKAGE_NAME": "com.phonegap.master2048"
+            "PACKAGE_NAME": "com.phonegap.clunsyBirl"
         },
         "cordova-plugin-splashscreen": {
-            "PACKAGE_NAME": "com.phonegap.master2048"
+            "PACKAGE_NAME": "com.phonegap.clunsyBirl"
         },
         "cordova-plugin-vibration": {
-            "PACKAGE_NAME": "com.phonegap.master2048"
+            "PACKAGE_NAME": "com.phonegap.clunsyBirl"
         },
         "cordova-plugin-whitelist": {
-            "PACKAGE_NAME": "com.phonegap.master2048"
+            "PACKAGE_NAME": "com.phonegap.clunsyBirl"
         },
         "cordova-plugin-fullscreen": {
-            "PACKAGE_NAME": "com.phonegap.master2048"
+            "PACKAGE_NAME": "com.phonegap.clunsyBirl"
         }
     },
     "dependent_plugins": {
         "cordova-plugin-compat": {
-            "PACKAGE_NAME": "com.phonegap.master2048"
+            "PACKAGE_NAME": "com.phonegap.clunsyBirl"
         },
         "cordova-plugin-file": {
-            "PACKAGE_NAME": "com.phonegap.master2048"
+            "PACKAGE_NAME": "com.phonegap.clunsyBirl"
         }
     }
 }
