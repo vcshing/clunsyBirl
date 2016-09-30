@@ -111,7 +111,7 @@ var app = {
     onDeviceReady: function () {
         var weinre,
             weinreUrl;
-
+		alert(1);
         document.removeEventListener('deviceready', app.onDeviceReady, false);
 
         if (app.weinre.enabled) {
@@ -125,12 +125,13 @@ var app = {
         }
 
         if (window.admob) {
+			alert(2);
             console.log('Binding ad events...');
             app.bindAdEvents();
             console.log('Initializing ads...');
             app.initAds();
         } else {
-            // alert('cordova-admob plugin not ready.\nAre you in a desktop browser? It won\'t work...');
+             alert('cordova-admob plugin not ready.\nAre you in a desktop browser? It won\'t work...');
         }
     },
     onAdLoaded: function (e) {
