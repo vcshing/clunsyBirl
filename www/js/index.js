@@ -65,7 +65,7 @@ var app = {
         if (window.admob) {
             admob.setOptions({
        			publisherId:          admobid.banner,  // Required
-				tappxIdAndroid:       "/120940746/Pub-12583-Android-7825",        // Optional
+				tappxIdAndroid:       "/120940746/Pub-12612-Android-6260",        // Optional
 				tappxShare:           0.8, 
 				isTesting: false, // receiving test ads (do not test with real ads as your account will be banned)				// Optional
                 interstitialAdId: admobid.interstitial,
