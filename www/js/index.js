@@ -77,7 +77,11 @@ var app = {
                 autoShowInterstitial: true // auto show interstitials ad when loaded
             });
 			
-			app.startBannerAds();
+			// Start showing banners (atomatic when autoShowBanner is set to true)
+			admob.createBannerView();
+
+			// Request interstitial (will present automatically when autoShowInterstitial is set to true)
+			admob.requestInterstitial();
         } else {
             // alert('cordova-admob plugin not ready.\nAre you in a desktop browser? It won\'t work...');
         }
