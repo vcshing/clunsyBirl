@@ -78,7 +78,7 @@ var app = {
 			
 			// Start showing banners (atomatic when autoShowBanner is set to true)
 			window.admob.createBannerView();
-			window.admob.requestInterstitialAd();
+			
         } else {
              // alert('cordova-admob plugin not ready.\nAre you in a desktop browser? It won\'t work...');
         }
