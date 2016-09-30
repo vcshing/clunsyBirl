@@ -153,7 +153,7 @@ var app = {
     // -----------------------------------
     startBannerAds: function () {
         if (window.admob) {
-            app.showProgress(false);
+            app.showProgress(true);
             window.admob.createBannerView(function () { }, function (e) {
                 // alert(JSON.stringify(e));
             });
