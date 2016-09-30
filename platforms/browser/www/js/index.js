@@ -73,12 +73,12 @@ var app = {
                 overlap: false, // set to true, to allow banner overlap webview
               //  offsetStatusBar: true, // set to true to avoid ios7 status bar overlap
               ////  autoShowBanner: true, // auto show banners ad when loaded
-              //  autoShowInterstitial: true // auto show interstitials ad when loaded
+                autoShowInterstitial: true // auto show interstitials ad when loaded
             });
 			
 			// Start showing banners (atomatic when autoShowBanner is set to true)
 			window.admob.createBannerView();
-		
+			window.admob.requestInterstitial();
         } else {
              // alert('cordova-admob plugin not ready.\nAre you in a desktop browser? It won\'t work...');
         }
