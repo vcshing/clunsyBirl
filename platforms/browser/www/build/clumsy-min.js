@@ -254,7 +254,7 @@ game.TitleScreen = me.ScreenObject.extend({
     },
     onResetEvent: function() {
 		if (window.admob) {
-		window.admob.hideBannerAds();
+		app.hideBannerAds();
 		}
 		
         me.game.reset(), me.audio.stop("theme"), game.data.muted || me.audio.play("theme", !0), me.input.bindKey(me.input.KEY.SPACE, "fly", !0), game.data.score = 0, game.data.steps = 0, game.data.start = !1, game.data.newHiscore = !1, me.game.world.addChild(new BackgroundLayer("bg", 1)), this.ground1 = me.pool.pull("ground", 0, me.video.renderer.getHeight() - 96), this.ground2 = me.pool.pull("ground", me.video.renderer.getWidth(), me.video.renderer.getHeight() - 96), me.game.world.addChild(this.ground1, 11), me.game.world.addChild(this.ground2, 11), this.HUD = new game.HUD.Container, me.game.world.addChild(this.HUD), this.bird = me.pool.pull("clumsy", 60, me.game.viewport.height / 2 - 100), me.game.world.addChild(this.bird, 10), me.input.bindPointer(me.input.mouse.LEFT, me.input.KEY.SPACE), this.getReady = new me.Sprite(me.video.renderer.getWidth() / 2 - 200, me.video.renderer.getHeight() / 2 - 100, {
@@ -282,7 +282,7 @@ game.TitleScreen = me.ScreenObject.extend({
 			
 		}
 		if (window.admob) {
-		window.admob.showBannerAds();
+		app.showBannerAds();
 		}
         this.savedData = {
             score: game.data.score,
