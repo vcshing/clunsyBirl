@@ -73,15 +73,11 @@ var app = {
                 bannerAtTop: false, // set to true, to put banner at top
                 overlap: true, // set to true, to allow banner overlap webview
                 offsetStatusBar: false, // set to true to avoid ios7 status bar overlap
-                autoShowBanner: false, // auto show banners ad when loaded
-                autoShowInterstitial: false // auto show interstitials ad when loaded
+                autoShowBanner: true, // auto show banners ad when loaded
+                autoShowInterstitial: true // auto show interstitials ad when loaded
             });
 			
-			// Start showing banners (atomatic when autoShowBanner is set to true)
-			setTimeout(function(){ 
-				window.admob.createBannerView(); 
-				window.admob.requestInterstitialAd();
-			}, 500);
+		
 		
 			
         } else {
