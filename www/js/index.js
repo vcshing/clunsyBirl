@@ -106,7 +106,7 @@ var app = {
         app.onResize();
     },
     onDeviceReady: function() {
-	 window.cache.clear( success, error );
+	 
         app.receivedEvent('deviceready');
     },
 	receivedEvent: function(id) {
