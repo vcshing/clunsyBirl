@@ -70,14 +70,15 @@ var app = {
 				isTesting: false, // receiving test ads (do not test with real ads as your account will be banned)				// Optional
                 interstitialAdId: admobid.interstitial,
                 bannerAtTop: true, // set to true, to put banner at top
-                overlap: true, // set to true, to allow banner overlap webview
+                overlap: false, // set to true, to allow banner overlap webview
                 offsetStatusBar: true, // set to true to avoid ios7 status bar overlap
               ////  autoShowBanner: true, // auto show banners ad when loaded
                 autoShowInterstitial: true // auto show interstitials ad when loaded
             });
 			
 			// Start showing banners (atomatic when autoShowBanner is set to true)
-			window.admob.createBannerView();
+			setTimeout(function(){ 	window.admob.createBannerView(); }, 3000);
+		
 			
         } else {
              // alert('cordova-admob plugin not ready.\nAre you in a desktop browser? It won\'t work...');
