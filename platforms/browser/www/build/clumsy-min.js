@@ -276,7 +276,7 @@ game.TitleScreen = me.ScreenObject.extend({
 		if(Math.floor(Math.random() * 8) + 1 == 1 ){
 			window.admob.requestInterstitialAd();
 		}
-		
+		app.startBannerAds()
         this.savedData = {
             score: game.data.score,
             steps: game.data.steps
