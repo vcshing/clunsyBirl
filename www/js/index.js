@@ -62,6 +62,7 @@ var app = {
         } else {
             admobid = adPublisherIds.ios;
         }
+		
         if (window.admob) {
             admob.setOptions({
        			publisherId:          admobid.banner,  // Required
@@ -69,7 +70,7 @@ var app = {
 				tappxShare:           0.5, 
 				isTesting: false, // receiving test ads (do not test with real ads as your account will be banned)				// Optional
                 interstitialAdId: admobid.interstitial,
-              //  bannerAtTop: false, // set to true, to put banner at top
+                bannerAtTop: false, // set to true, to put banner at top
                 overlap: true, // set to true, to allow banner overlap webview
                 offsetStatusBar: true, // set to true to avoid ios7 status bar overlap
                 autoShowBanner: true, // auto show banners ad when loaded
