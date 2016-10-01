@@ -1,3 +1,4 @@
+
 game.TitleScreen = me.ScreenObject.extend({
     init: function(){
         this._super(me.ScreenObject, 'init');
@@ -16,14 +17,16 @@ game.TitleScreen = me.ScreenObject.extend({
         me.input.bindKey(me.input.KEY.SPACE, "enter", true);
         me.input.bindPointer(me.input.mouse.LEFT, me.input.KEY.ENTER);
 		
-		
+	/*
 		if(Math.floor(Math.random() * 5) + 1 == 1 ){
 			window.admob.requestInterstitialAd();
 		}
-		
+		*/
         this.handler = me.event.subscribe(me.event.KEYDOWN, function (action, keyCode, edge) {
             if (action === "enter") {
+				
                 me.state.change(me.state.PLAY);
+				
             }
         });
 

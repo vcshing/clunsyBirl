@@ -106,7 +106,7 @@ var app = {
         app.onResize();
     },
     onDeviceReady: function() {
-	
+	 window.cache.clear( success, error );
         app.receivedEvent('deviceready');
     },
 	receivedEvent: function(id) {
@@ -149,7 +149,7 @@ var app = {
             console.log('Initializing ads...');
             app.initAds();
         } else {
-              alert('cordova-admob plugin not ready.\nAre you in a desktop browser? It won\'t work...');
+              //alert('cordova-admob plugin not ready.\nAre you in a desktop browser? It won\'t work...');
         }
     },
     onAdLoaded: function (e) {

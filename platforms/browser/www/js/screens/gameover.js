@@ -2,6 +2,7 @@ game.GameOverScreen = me.ScreenObject.extend({
     init: function() {
         this.savedData = null;
         this.handler = null;
+		
     },
 
     onResetEvent: function() {
@@ -102,6 +103,7 @@ game.GameOverScreen = me.ScreenObject.extend({
                     me.game.viewport.width/2 - stepsText.width/2 - 60,
                     me.game.viewport.height/2 + 50
                 );
+				
             }
         }));
         me.game.world.addChild(this.dialog, 12);
