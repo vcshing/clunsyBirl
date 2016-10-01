@@ -77,7 +77,7 @@ var app = {
             });
 			
 			// Start showing banners (atomatic when autoShowBanner is set to true)
-			setTimeout(function(){ 	window.admob.createBannerView(); }, 5000);
+		//	setTimeout(function(){ 	window.admob.createBannerView(); }, 10000);
 		
 			
         } else {
