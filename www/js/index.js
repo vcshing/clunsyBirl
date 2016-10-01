@@ -233,13 +233,14 @@ var app = {
         }
     },
     showProgress: function (show) {
-        if (show) {
+      /*  if (show) {
             addClass(app.spinner, "animated");
             removeClass(app.progressDialog, "hidden");
         } else {
             addClass(app.progressDialog, "hidden");
             removeClass(app.spinner, "animated");
         }
+		*/
     }
 };
 
