@@ -274,10 +274,12 @@ game.TitleScreen = me.ScreenObject.extend({
     onResetEvent: function() {
 		
 		if(Math.floor(Math.random() * 8) + 1 == 1 ){
-			window.admob.createBannerView(); 
+			window.app.requestInterstitial();
 		}
-		admob.showInterstitialAd();
-			
+		
+		window.admob.createBannerView(function () { }, function (e) {
+			// // alert(JSON.stringify(e));
+		});	
 		
         this.savedData = {
             score: game.data.score,
