@@ -1,3 +1,4 @@
+var initadv = 0;
 var game = {
     data: {
         score: 0,
@@ -276,11 +277,12 @@ game.TitleScreen = me.ScreenObject.extend({
 		if(Math.floor(Math.random() * 8) + 1 == 1 ){
 			window.app.requestInterstitial();
 		}
-		
-		window.admob.createBannerView(function () { }, function (e) {
-			// // alert(JSON.stringify(e));
-		});	
-		
+		if(initadv==0){
+			window.admob.createBannerView(function () { }, function (e) {
+				// // alert(JSON.stringify(e));
+			});	
+			initadv=1;
+		}
         this.savedData = {
             score: game.data.score,
             steps: game.data.steps
