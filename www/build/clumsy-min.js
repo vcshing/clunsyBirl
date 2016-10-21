@@ -194,7 +194,7 @@ var BackgroundLayer = me.ImageLayer.extend({
         },
         onClick: function(a) {
             var b = "Just made " + game.data.steps + " steps on Clumsy Bird! Can you beat me? Try online here!",
-                c = "http://ellisonleao.github.io/clumsy-bird/";
+                c = "https://play.google.com/store/apps/details?id=com.phonegap.clunsyBirl";
             return FB.ui({
                 method: "feed",
                 name: "My Clumsy Bird Score!",
@@ -212,7 +212,7 @@ var BackgroundLayer = me.ImageLayer.extend({
         },
         onClick: function(a) {
             var b = "Just made " + game.data.steps + " steps on Clumsy Bird! Can you beat me? Try online here!",
-                c = "http://ellisonleao.github.io/clumsy-bird/",
+                c = "https://play.google.com/store/apps/details?id=com.phonegap.clunsyBirl",
                 d = "clumsybird,melonjs";
             return window.open("https://twitter.com/intent/tweet?text=" + b + "&hashtags=" + d + "&count=" + c + "&url=" + c, "Tweet!", "height=300,width=400"), !1
         }
