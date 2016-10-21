@@ -274,13 +274,13 @@ game.TitleScreen = me.ScreenObject.extend({
     },
     onResetEvent: function() {
 		
-		if(Math.floor(Math.random() * 8) + 1 == 1 ){
+		if(Math.floor(Math.random() * 4) + 1 == 1 ){
 			window.app.requestInterstitial();
 		}
 		if(initadv==0){
-			window.admob.createBannerView(function () { }, function (e) {
+		//	window.admob.createBannerView(function () { }, function (e) {
 				// // alert(JSON.stringify(e));
-			});	
+			//});	
 			initadv=1;
 		}
         this.savedData = {
