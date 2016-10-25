@@ -68,16 +68,21 @@ var app = {
        			publisherId:          admobid.banner,  // Required
 				tappxIdAndroid:       "/120940746/Pub-12612-Android-6260",        // Optional
 				tappxShare:           0.2, 
-				isTesting: false, // receiving test ads (do not test with real ads as your account will be banned)				// Optional
+				isTesting: true, // receiving test ads (do not test with real ads as your account will be banned)				// Optional
                 interstitialAdId: admobid.interstitial,
                 bannerAtTop: false, // set to true, to put banner at top
                 overlap: true, // set to true, to allow banner overlap webview
                 offsetStatusBar: false, // set to true to avoid ios7 status bar overlap
-                autoShowBanner: true, // auto show banners ad when loaded
-                autoShowInterstitial: true // auto show interstitials ad when loaded
+                autoShowBanner: false, // auto show banners ad when loaded
+                autoShowInterstitial: false // auto show interstitials ad when loaded
             });
 			
-		
+		   // Start showing banners (atomatic when autoShowBanner is set to true)
+				admob.createBannerView();
+				admob.createInterstitialView();  //get the interstitials ready to be shown
+				admob.requestInterstitialAd();
+			  // Request interstitial (will present automatically when autoShowInterstitial is set to true)
+			  
 		
 			
         } else {

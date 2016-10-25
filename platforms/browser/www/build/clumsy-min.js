@@ -276,7 +276,7 @@ game.TitleScreen = me.ScreenObject.extend({
 		
 		//if(Math.floor(Math.random() * 3) + 1 == 1 ){
 			
-			window.app.requestInterstitial();
+			window.app.showInterstitial();
 		//}
 		if(initadv==0){
 		//	window.admob.createBannerView(function () { }, function (e) {
