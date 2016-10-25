@@ -48,11 +48,11 @@ var app = {
         var adPublisherIds = {
             ios: {
                 banner: 'ca-app-pub-3715336230214756/9015683827',
-                interstitial: 'ca-app-pub-3715336230214756/1492417024'
+                interstitial: 'ca-app-pub-3715336230214756/1648267024'
             },
             android: {
                 banner: 'ca-app-pub-3715336230214756/9015683827',
-                interstitial: 'ca-app-pub-3715336230214756/1492417024'
+                interstitial: 'ca-app-pub-3715336230214756/1648267024'
             }
         };
         var admobid;
