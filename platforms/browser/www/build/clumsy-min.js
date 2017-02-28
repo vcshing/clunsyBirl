@@ -18,6 +18,10 @@ var game = {
         }))) : void alert("Your browser does not support HTML5 canvas.")
     },
     loaded: function() {
+		  setTimeout(() => {
+			  //alert(1);
+              Splashscreen.hide();
+          }, 100);
         me.state.set(me.state.MENU, new game.TitleScreen), me.state.set(me.state.PLAY, new game.PlayScreen), me.state.set(me.state.GAME_OVER, new game.GameOverScreen), me.input.bindKey(me.input.KEY.SPACE, "fly", !0), me.input.bindKey(me.input.KEY.M, "mute", !0), me.input.bindPointer(me.input.KEY.SPACE), me.pool.register("clumsy", BirdEntity), me.pool.register("pipe", PipeEntity, !0), me.pool.register("hit", HitEntity, !0), me.pool.register("ground", Ground, !0), me.game.viewport.setBounds(0, 0, 900, 600), me.state.change(me.state.MENU)
     }
 };
@@ -211,10 +215,11 @@ var BackgroundLayer = me.ImageLayer.extend({
             c.image = "tweet", c.framewidth = 152, c.frameheight = 75, this._super(me.GUI_Object, "init", [a, b, c])
         },
         onClick: function(a) {
-            var b = "Just made " + game.data.steps + " steps on Clumsy Bird! Can you beat me? Try online here!",
-                c = "https://play.google.com/store/apps/details?id=com.phonegap.clunsyBirl",
-                d = "clumsybird,melonjs";
-            return window.open("https://twitter.com/intent/tweet?text=" + b + "&hashtags=" + d + "&count=" + c + "&url=" + c, "Tweet!", "height=300,width=400"), !1
+           // var b = "Just made " + game.data.steps + " steps on Clumsy Bird! Can you beat me? Try online here!",
+           //     c = "https://play.google.com/store/apps/details?id=com.phonegap.clunsyBirl",
+           //     d = "clumsybird,melonjs";
+           // return window.open("https://twitter.com/intent/tweet?text=" + b + "&hashtags=" + d + "&count=" + c + "&url=" + c, "Tweet!", "height=300,width=400"), !1
+		   return null;
         }
     });
 game.TitleScreen = me.ScreenObject.extend({
