@@ -19,6 +19,7 @@ var game = {
     },
     loaded: function() {
 		  setTimeout(() => {
+			  alert(1);
               Splashscreen.hide();
           }, 100);
         me.state.set(me.state.MENU, new game.TitleScreen), me.state.set(me.state.PLAY, new game.PlayScreen), me.state.set(me.state.GAME_OVER, new game.GameOverScreen), me.input.bindKey(me.input.KEY.SPACE, "fly", !0), me.input.bindKey(me.input.KEY.M, "mute", !0), me.input.bindPointer(me.input.KEY.SPACE), me.pool.register("clumsy", BirdEntity), me.pool.register("pipe", PipeEntity, !0), me.pool.register("hit", HitEntity, !0), me.pool.register("ground", Ground, !0), me.game.viewport.setBounds(0, 0, 900, 600), me.state.change(me.state.MENU)
