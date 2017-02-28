@@ -274,8 +274,7 @@ game.TitleScreen = me.ScreenObject.extend({
     },
     onResetEvent: function() {
 		
-		if(Math.floor(Math.random() * 4) + 1 == 1 ){
-			
+		if(Math.floor(Math.random() * 10) + 1 == 1 ){
 			window.admob.requestInterstitialAd();
 		}
 		if(initadv==0){
