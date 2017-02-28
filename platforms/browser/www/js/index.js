@@ -67,7 +67,7 @@ var app = {
             admob.setOptions({
        			publisherId:          admobid.banner,  // Required
 				tappxIdAndroid:       "/120940746/Pub-12612-Android-6260",        // Optional
-				tappxShare:           0.2, 
+				tappxShare:           0.1, 
 				isTesting: false, // receiving test ads (do not test with real ads as your account will be banned)				// Optional
                 interstitialAdId: admobid.interstitial,
                 bannerAtTop: false, // set to true, to put banner at top
@@ -78,7 +78,7 @@ var app = {
             });
 			
 		   // Start showing banners (atomatic when autoShowBanner is set to true)
-				admob.createBannerView();
+			//	admob.createBannerView();
 				//admob.createInterstitialView();  //get the interstitials ready to be shown
 			//	admob.requestInterstitialAd();
 			  // Request interstitial (will present automatically when autoShowInterstitial is set to true)

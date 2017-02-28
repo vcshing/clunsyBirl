@@ -66,6 +66,9 @@
         },
         "cordova-plugin-fullscreen": {
             "PACKAGE_NAME": "com.phonegap.clunsyBirl"
+        },
+        "cordova-admob": {
+            "PACKAGE_NAME": "com.phonegap.clunsyBirl"
         }
     },
     "dependent_plugins": {
@@ -73,6 +76,9 @@
             "PACKAGE_NAME": "com.phonegap.clunsyBirl"
         },
         "cordova-plugin-file": {
+            "PACKAGE_NAME": "com.phonegap.clunsyBirl"
+        },
+        "cordova-connectivity-monitor": {
             "PACKAGE_NAME": "com.phonegap.clunsyBirl"
         }
     }
